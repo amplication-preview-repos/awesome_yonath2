@@ -6,3 +6,10 @@ datasource db {
 generator client {
   provider = "prisma-client-js"
 }
+
+model Sale {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  name      String?
+  updatedAt DateTime @updatedAt
+}
